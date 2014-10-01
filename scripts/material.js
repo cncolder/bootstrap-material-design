@@ -47,7 +47,8 @@ $(function (){
     }
 
     $(document).on("change", ".checkbox input", function() {
-        $(this).blur();
+        // safari cannot auto focus when click.
+        $(this).focus();
     });
 
     $(document).on("keyup change", ".form-control", function() {
